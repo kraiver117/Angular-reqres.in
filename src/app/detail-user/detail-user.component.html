@@ -1,11 +1,12 @@
 <app-header></app-header>
 
 
-<div style="justify-items: end; display: flex;">
-    <input  [(ngModel)]="index" required>
+<input  [(ngModel)]="index" required>
     <button (click)="getUserByID(index)" class="btn btn-secondary">Show User By Id</button>
     <button (click)="getFalseList()"class="btn btn-secondary">Hide User By Id</button>
     <br>
+<div style="justify-items: end; display: flex;">
+    
     
     <div [hidden]="checkUserList" *ngIf="checkUser">
         <table class="table table-striped" >
