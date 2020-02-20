@@ -1,0 +1,44 @@
+<app-header></app-header>
+
+
+<div style="justify-items: end; display: flex;">
+    <input  [(ngModel)]="index" required>
+    <button (click)="getUserByID(index)" class="btn btn-secondary">Show User By Id</button>
+    <button (click)="getFalseList()"class="btn btn-secondary">Hide User By Id</button>
+    <br>
+    
+    <div [hidden]="checkUserList" *ngIf="checkUser">
+        <table class="table table-striped" >
+          
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Avatar</th>
+                <th scope="col">Fist name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+              </tr>
+            
+            
+              <tr >
+                <td>
+                    {{use_user}}
+                </td>
+                <td>
+                    <img [src]="_user.avatar" alt="">
+                </td>
+                <td>
+                    {{_user.first_name}}
+                </td>
+                <td>
+                    {{_user.last_name}}
+                </td>
+                <td>
+                    {{_user.email}}
+                </td>
+              </tr>
+            
+          </table>
+    </div>
+</div>
+
+

@@ -1,0 +1,70 @@
+<app-header></app-header>
+
+<br>
+<h1 style="text-align: center;">List of Users</h1>
+<table class="table table-striped">
+      <tr>
+        <th scope="row"></th>
+        <td ([ngModel])="users.avatar" *ngFor="let users of _user" style="text-align: center;">
+            <img [src]="users.avatar" alt=""> 
+            <br>
+            {{users.first_name}}
+            <br>
+            <button (click)="getUserById(users.id)" class="btn btn-secondary">Show Details</button>
+           </td>
+      </tr>
+  </table>
+
+
+<div [hidden]="checkUserList">
+    <table class="table table-striped" >
+      
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">Avatar</th>
+            <th scope="col">Fist name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email</th>
+          </tr>
+        
+        
+          <tr >
+            <td>
+                {{userlist.id}}
+            </td>
+            <td>
+                <img [src]="userlist.avatar" alt="">
+            </td>
+            <td>
+                {{userlist.first_name}}
+            </td>
+            <td>
+                {{userlist.last_name}}
+            </td>
+            <td>
+                {{userlist.email}}
+            </td>
+          </tr>
+        
+      </table>
+</div>
+  
+ 
+    <br> 
+    <br>
+
+    <div  class="container-buttons">
+        <button (click)="nextPage()" class="btn btn-secondary" ><=</button>
+        <button (click)="nextPage(1)" class="btn btn-secondary">=></button>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+

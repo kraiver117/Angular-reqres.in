@@ -1,0 +1,86 @@
+<app-header></app-header>
+
+<div>
+    <div class="row">
+      <div class="col-md-1">
+      </div>
+      <div class="col-12 col-md-10">
+        <div class="card">
+          <!--Card content-->
+          <div class="card-body px-lg-5">
+                
+              <!-- Form -->
+              <form class="text-center" style="color: #757575;" action="#!" [formGroup]="loginForm" (ngSubmit)="registerUser()">
+                <h1>Create User</h1>
+                  <!-- name -->
+                  <div class="md-form mt-3">
+                    <input type="text"  id="name" placeholder="name" formControlName="name" required>
+                      
+                  </div>
+        
+                  <!-- Job -->
+                  <div class="md-form">
+                    <input type="text"  id="job" placeholder="job" formControlName="job" required>
+                     
+                  </div>
+                  <!--Email-->
+                   <div class="md-form">
+                    <input type="email"  id="email" placeholder="email" >
+                      
+                  </div>
+                  <!--Password-->
+                   <div class="md-form">
+                    <input type="password"  id="password" placeholder="password">
+                  </div>
+
+                  <!--  Add and clear Buttons -->
+                  <button class="btn btn-secondary" type="submit">Add User</button>
+                  <input type="reset" value="Clear" (click)="clearFields()" class="btn btn-secondary">
+              </form>
+              <!-- Form -->
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1">
+        
+      </div>
+    </div>
+  </div>
+  
+  <div class="container">
+    <div [hidden]="checkUserRegister" class="divSuccess">
+        <h1>User Added</h1>
+        <table class="table table-striped">
+            <tr>
+                <td>
+                    Id
+                </td>
+                <td>
+                    Name
+                </td>
+                <td>
+                    Job
+                </td>
+                <td>
+                    CreatedAt
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{_userRegister.id}}
+                </td>
+                <td>
+                    {{_userRegister.name}}
+                </td>
+                <td>
+                    {{_userRegister.job}}
+                </td>
+                <td>
+                    {{_userRegister.createdAt}}
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+  </div>
+  

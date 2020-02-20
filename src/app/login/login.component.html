@@ -1,0 +1,46 @@
+
+
+<div>
+  <div class="row">
+    <div class="col-md-4">
+    </div>
+    <div class="col-12 col-md-4">
+      <div class="card">
+        <h5 class="card-header info-color white-text text-center py-4">
+          <a href="https://reqres.in/" target="_blank"><strong>Reqres.in Api</strong></a>
+          <br>
+          <br>
+          <h1><strong>Log in</strong></h1>
+        </h5>
+        
+      
+        <!--Card content-->
+        <div class="card-body px-lg-5">
+      
+            <!-- Form -->
+            <form class="text-center" style="color: #757575;" action="#!" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <p>Use your credentials to log in and see the magic </p>
+                <!-- Email -->
+                <div class="md-form mt-3">
+                    <input type="email" id="materialSubscriptionFormPasswords" class="form-control" formControlName="email" required>
+                    <label for="materialSubscriptionFormPasswords">Email</label>
+                </div>
+      
+                <!-- Password -->
+                <div class="md-form">
+                    <input type="password" id="materialSubscriptionFormEmail" class="form-control" formControlName="password" required>
+                    <label for="materialSubscriptionFormEmail">Password</label>
+                </div>
+                <!-- Sign in button -->
+                <button class="btn btn-outline-info btn-rounded btn-block z-depth-0 my-4 waves-effect" type="submit">Sign in</button>
+            </form>
+            <!-- Form -->
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      
+    </div>
+  </div>
+</div>
+

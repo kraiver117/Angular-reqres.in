@@ -1,0 +1,15 @@
+th,tr{
+    text-align: center;
+    
+}
+
+.container-buttons{
+    width: 100%;
+    display: flex; 
+    justify-content: center;
+}
+
+button{
+    width: 120px;
+    margin:10px;
+}
